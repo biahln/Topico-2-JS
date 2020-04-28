@@ -29,16 +29,53 @@ document.write('<p><b>Demonstrativo para calculo do salario liquido</b>);
 
 document.write('<p> Quantidade de horas trabalhadas (135 a 180) => <b>' + js_qht + '</br>');
 
-    if(js_qht > 180){
+    if (js_qht > 180){
        document.write('...(<b>valor maximo excedido! </b>)');
         
     }
     
-    if(js_qht < 135) {
-       document.write('<p><b>Classificação em ordem crescente:</b> ' +js_n2 + ' e ' +js_n1);
+    if (js_qht < 135) {
+       document.write('...(<b>Valor mínimo inválido!</b>');
        
     }
     
+document.write('<p>valor da hora trabalhada (25 a 50) => <b>' + js_vht + '</b>);
+     if (js_vht > 50){
+        document.write('...(<b>valor maximo excedido! </b>)');
+    }
+     
+     if (js_vht < 25){
+         document.write('...(<b>valor minimo invalido </b>)');
+     }
+document.write('<p>Percentual de desconto INSS (5 a 15) =>' + js_inss + '</b>');
+     if (js_inss > 15){
+         document.write('...(<b>valor maximo excedido! </b>)');
+     }
+     if (js_inss < 5){
+         document.write('...(<b> valor minimo invalido </b>)');
+     }
+    
+document.write('<p>==============================================');
+document.write('<p><b>salario bruto = </b' + js_sb);
+document.write('<p>Total de descontos INSS = ' + js_tdes);
+document.write('<p><b>salario liquido = </b>' + js_s1);
+
+if (js_s1 > 10500){
+    document.write('...(<b>salario elevado </b>maior que 10.500)');
+}
+else {
+    if (js_s1 > 6000){
+        document.write('...(<b>salario satisfatorio </b>maior que 6.000)');
+    }
+    else {
+        if (js_s1 > 3000){
+            document.write('...(<b>salario moderado </b>maior que 3.000)');
+        }
+        else {
+            document.write('...(<b>salario insatisfatorio </b>menor ou igual a 3000)');
+        }
+    }
+}
 </script>
 </body>
 </html
